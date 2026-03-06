@@ -283,7 +283,7 @@ reserve 后扩容次数: 1
 当 `push_back`/`emplace_back` 等操作导致 `size == capacity` 时，触发扩容。
 
 ##### 2.2 扩容流程（核心成本）
-```mermaid
+```cpp
 graph TD
     A[容量不足] --> B[计算新容量（2倍）]
     B --> C[申请新内存（new T[new_cap]）]
